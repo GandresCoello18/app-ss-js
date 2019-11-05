@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from 'react-helmet';
-import { Menu, Input, Image, Popup } from 'semantic-ui-react';
+import { Menu, Input, Image, Popup, Icon } from 'semantic-ui-react';
 import "../assets/styles/components/header.scss";
 
 class Header extends React.Component{
@@ -55,6 +55,13 @@ class Header extends React.Component{
                                     active={activeItem === 'Opciones'}
                                     onClick={this.handleItemClick}
                                 />
+                                <Menu.Item 
+                                    name="notificacion"
+                                    active={activeItem === 'notificacion'}
+                                    onClick={this.handleItemClick}
+                                >
+                                    <Icon name="bell" />
+                                </Menu.Item>
                                 <Menu.Item
                                     position='right'
                                     name='User'

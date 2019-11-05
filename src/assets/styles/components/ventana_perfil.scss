@@ -4,9 +4,30 @@
     background-color: #fff;
     width: 100%;
     border: 1px solid #cdcdcd;
+    overflow: hidden;
     #fondo_perfil{
         padding: 25px;
         background-color: $color_principal;
+        &:before{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 15px;
+            left: 30px;
+            background-color: $color_principal_oscuro;
+            border-radius: 50%;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 15px;
+            left: 170px;
+            background-color: $color_principal_oscuro;
+            border-radius: 50%;
+        }
     }
     #descripcion_perfil{
         background-color: #fff;

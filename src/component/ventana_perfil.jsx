@@ -7,7 +7,7 @@ const VentanaPerfil = (props) => {
         <>
             <article id="area_perfil">
                 <div id="fondo_perfil">
-
+                    
                 </div>
                 <div id="descripcion_perfil">
                     <figure>

@@ -1,5 +1,19 @@
-.barra_superior{
-    width: 100%;
-    background-color: #fff;
-    padding: 7px;
+@import '../components/global/global';
+
+.scroll_medio{
+    overflow-y: scroll;
+    height: 700px;
+    .barra_superior{
+        width: 100%;
+        background-color: #fff;
+        padding: 7px;
+    }
+}
+
+.scroll_medio::-webkit-scrollbar {
+    width: 10px;
+}
+.scroll_medio::-webkit-scrollbar-thumb{
+    background-color: $color_principal_oscuro;
+    border-radius: 5px;
 }

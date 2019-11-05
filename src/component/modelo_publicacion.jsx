@@ -2,13 +2,13 @@ import React from "react";
 import { Image, Icon, Button, Label } from "semantic-ui-react";
 import "../assets/styles/components/modelo_publicacion.scss";
 
-const Modelo = (props) => {
+const Modelo = ({children}) => {
     return(
         <>
-            <article className="modelo-area_publicacion">
+            <article className="modelo-area_publicacion mb-3">
                 <div className="row heaer_modelo">
                     <div className="col-8 col-lg-7">
-                        <Image src="https://react.semantic-ui.com/logo.png" size="mini" />
+                        <Image src="https://react.semantic-ui.com/logo.png" size="mini" /><b className="user_name">Andres Coello</b>
                     </div>
                     <div className="col-4 col-lg-5">
                         <span className="mt-2 ml-lg-5">20/10/2020 <Icon name="ellipsis vertical" size="large" className=" opciones_modelo"/></span>                        
@@ -19,7 +19,7 @@ const Modelo = (props) => {
 
                 <div className="row mt-2 p-3">
                     <div className="col-12">
-                        fjei
+                        {children}
                     </div>
                 </div>
 

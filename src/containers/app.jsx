@@ -2,6 +2,8 @@ import React from "react";
 import VentanPerfil from "../component/ventana_perfil";
 import Preguntale from "../component/preguntale_ha";
 import Necesita from "../component/necesita_ayuda";
+import ContenidoPublicacion from "../component/contenido_publicaciones";
+import ContenidoPublicacionFile from "../component/contenido_publicaciones_file";
 import ModeloPublicacion from "../component/modelo_publicacion";
 import { Image, Button } from 'semantic-ui-react';
 import "../assets/styles/container/index.scss";
@@ -23,8 +25,8 @@ class App extends React.Component{
                                 </div> 
                             </div>
                         </div>
-                        <div className="col-12 col-sm-8 col-md-6 col-lg-7">
-                            <div class="row barra_superior ml-1">
+                        <div className="col-12 col-sm-8 col-md-6 col-lg-7 scroll_medio">
+                            <div class="row barra_superior ml-1 border">
                                 <div className="col-4 col-lg-7">
                                     <Image src="https://react.semantic-ui.com/logo.png" size="mini" /> 
                                 </div>
@@ -40,7 +42,14 @@ class App extends React.Component{
 
                             <div className="row mt-3">
                                 <div className="col-12">
-                                    <ModeloPublicacion />
+                                    <ModeloPublicacion>
+                                        <ContenidoPublicacion />
+                                        <ContenidoPublicacionFile />
+                                    </ModeloPublicacion>
+
+                                    <ModeloPublicacion>
+                                        <ContenidoPublicacionFile />
+                                    </ModeloPublicacion>
                                 </div>
                             </div>
 
