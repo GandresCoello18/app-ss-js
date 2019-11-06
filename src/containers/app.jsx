@@ -25,7 +25,7 @@ class App extends React.Component{
                                 </div> 
                             </div>
                         </div>
-                        <div className="col-12 col-sm-8 col-md-6 col-lg-7 scroll_medio">
+                        <div className="col-12 col-sm-8 col-md-6 col-lg-7 scroll_medio mt-3 mt-md-0">
                             <div class="row barra_superior ml-1 border">
                                 <div className="col-4 col-lg-7">
                                     <Image src="https://react.semantic-ui.com/logo.png" size="mini" /> 

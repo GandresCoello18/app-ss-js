@@ -12,7 +12,7 @@ const data = [0,0,0];
 const NecesitaAyuda = (props) => {
     return(
         <>
-            <article id="area_necesita_ayuda">
+            <article id="area_necesita_ayuda" className="mt-3 mt-md-0">
                 <h5 className="text-center mt-2">Preguntas sin respuesta</h5>
                 {data.map( valor => (
                     <Card>

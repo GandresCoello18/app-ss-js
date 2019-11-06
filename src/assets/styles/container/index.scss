@@ -2,7 +2,7 @@
 
 .scroll_medio{
     overflow-y: scroll;
-    height: 700px;
+    height: 500px;
     .barra_superior{
         width: 100%;
         background-color: #fff;
@@ -16,4 +16,19 @@
 .scroll_medio::-webkit-scrollbar-thumb{
     background-color: $color_principal_oscuro;
     border-radius: 5px;
+}
+
+@media screen and (min-width: 544px){
+	
+}
+@media screen and (min-width: 768px){
+    .scroll_medio{
+        height: 700px;
+    }
+}
+@media screen and (min-width: 992px){
+	
+}
+@media screen and (min-width: 1200px){
+	
 }

@@ -1,0 +1,26 @@
+#area_modelo_clases{
+    background-color: #fff;
+    .categoria{
+        float: right;
+    }
+    .modelo_contenido{
+        .rango{
+            padding: 10px;
+            background-color: #fff;
+            position: absolute;
+            bottom: 100px;
+            border-radius: 15px;
+            opacity: 0.8;
+            right: 40px;
+        }
+        .user_aprobado{
+            padding: 10px;
+            background-color: #fff;
+            position: absolute;
+            bottom: 100px;
+            border-radius: 15px;
+            opacity: 0.8;
+            left: 40px;
+        }
+    }
+}
