@@ -1,7 +1,8 @@
 import React from "react";
 import VentanCurso from "../component/modelo_proyectos";
-import Preguntale from "../component/preguntale_ha";
+import Preguntale from "../component/preguntale_ah";
 import Necesita from "../component/necesita_ayuda";
+import BarraSuperior from '../component/barra_superior';
 import { Image, Button } from 'semantic-ui-react';
 
 const ProyectoFinal  = (props) => {
@@ -20,19 +21,7 @@ const ProyectoFinal  = (props) => {
                         </div>
                     </div>
                     <div className="col-12 col-sm-8 col-md-6 col-lg-7 scroll_medio mt-3 mt-md-0">
-                        <div class="row barra_superior ml-1 border">
-                            <div className="col-4 col-lg-7">
-                                <Image src="https://react.semantic-ui.com/logo.png" size="mini" /> 
-                            </div>
-                            <div className="col-8 col-lg-5">
-                                <Button floated="right" basic color='red'>
-                                    Preguntar        
-                                </Button>
-                                <Button floated="right" basic color='green'>
-                                    Publicar
-                                </Button>
-                            </div>
-                        </div>
+                        <BarraSuperior />
 
                         <div className="row mt-4">
                             <div className="col-12">
@@ -41,7 +30,7 @@ const ProyectoFinal  = (props) => {
                         </div>
 
                     </div>
-                    <div className="col-12 col-md-3">
+                    <div className="col-12 col-md-3 scroll_medio mt-4 mt-md-0">
                         <Necesita />
                     </div>
                 </div>

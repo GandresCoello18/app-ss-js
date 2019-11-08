@@ -2,7 +2,39 @@
 
 nav{
     background-color: $color_principal;
+    .menu-hamburguesa{
+        position: absolute;
+        left: 90%;
+        top: 30px;
+        display: block;
+        z-index: 99;
+        cursor: pointer;
+    }
+    .responsive-mobile{
+        display: none;
+    }
 }
 .ui.inverted.menu{
     background-color: $color_principal !important;
+}
+
+
+@media screen and (min-width: 544px){
+	
+}
+@media screen and (min-width: 768px){
+    nav{
+        .menu-hamburguesa{
+            display: none;
+        }
+        .responsive-mobile{
+            display: block;
+        }
+    }
+}
+@media screen and (min-width: 992px){
+	
+}
+@media screen and (min-width: 1200px){
+	
 }

@@ -1,10 +1,11 @@
 import React from "react";
-import VentanPerfil from "../component/ventana_perfil";
-import Preguntale from "../component/preguntale_ha";
+import PerfilVentana from "../component/perfil_ventaja";
+import Preguntale from "../component/preguntale_ah";
 import Necesita from "../component/necesita_ayuda";
 import ContenidoPublicacion from "../component/contenido_publicaciones";
 import ContenidoPublicacionFile from "../component/contenido_publicaciones_file";
 import ModeloPublicacion from "../component/modelo_publicacion";
+import BarraSuperior from '../component/barra_superior';
 import { Image, Button } from 'semantic-ui-react';
 import "../assets/styles/container/index.scss";
 
@@ -18,7 +19,7 @@ class App extends React.Component{
                         <div className="col-12 col-sm-4 col-md-3 col-lg-2">
                             <div className="row">
                                <div className="col-12">
-                                    <VentanPerfil />
+                                    <PerfilVentana />
                                </div>
                                <div className="col-12 mt-4">
                                     <Preguntale />
@@ -26,19 +27,7 @@ class App extends React.Component{
                             </div>
                         </div>
                         <div className="col-12 col-sm-8 col-md-6 col-lg-7 scroll_medio mt-3 mt-md-0">
-                            <div class="row barra_superior ml-1 border">
-                                <div className="col-4 col-lg-7">
-                                    <Image src="https://react.semantic-ui.com/logo.png" size="mini" /> 
-                                </div>
-                                <div className="col-8 col-lg-5">
-                                    <Button floated="right" basic color='red'>
-                                        Preguntar        
-                                    </Button>
-                                    <Button floated="right" basic color='green'>
-                                        Publicar
-                                    </Button>
-                                </div>
-                            </div>
+                            <BarraSuperior />
 
                             <div className="row mt-3">
                                 <div className="col-12">
@@ -54,7 +43,7 @@ class App extends React.Component{
                             </div>
 
                         </div>
-                        <div className="col-12 col-md-3">
+                        <div className="col-12 col-md-3 scroll_medio mt-4 mt-md-0">
                             <Necesita />
                         </div>
                     </div>
