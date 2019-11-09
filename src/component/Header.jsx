@@ -12,13 +12,20 @@ class Header extends React.Component{
     handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
     open = () => {
-        var menu = document.querySelector('.responsive-mobile');
-        console.log(menu.style);
-        if(menu.style.display === 'none'){
-            menu.style.display = "block";
-        }else{
-            menu.style.display = "none";
+        var menu = document.querySelectorAll('.responsive-mobile');
+        console.log(menu[0].style);
+        
+        if(menu[0].style.display === 'block'){
+            for(var i=0; i<=menu.length; i++){
+                menu[i].style.display = '';
+            }
         }
+        
+        if(menu[0].style.display === ''){
+            for(var i=0; i<=menu.length; i++){
+                menu[i].style.display = "block";
+            }
+        }    
     }
     
     render(){
@@ -43,7 +50,7 @@ class Header extends React.Component{
                                         <img src='https://react.semantic-ui.com/logo.png' />
                                     </Menu.Item>
                                 </Link>
-                                <Link to="" className="responsive-mobile">
+                                <Link to="/" className="responsive-mobile">
                                     <Menu.Item>
                                         <Input className='icon' icon='search' placeholder='Buscando...' />
                                     </Menu.Item>
@@ -91,6 +98,28 @@ class Header extends React.Component{
                                     >
                                         <Icon name="bell" />
                                     </Menu.Item>
+                                    <div className="area_notification">
+                                        <Menu vertical>
+                                            <div className="text-center p-2">Notificaciones</div>
+                                            <Menu.Item className="iten_notification">
+                                                <Popup
+                                                content="Elliot has been a member since July 2012"
+                                                key="Elliot Fu"
+                                                header="Elliot Fu"
+                                                trigger={<Image src="https://static.platzi.com/media/avatars/avatars/programandres_415dc47e-e96a-4a50-9f8d-00a815095ffd.jpg" avatar />}
+                                                /> <span style={{color: "#000"}}><b>Andres coello:</b> Ha subido una nueva publicacion. <Icon name="newspaper outline" /></span>
+                                            </Menu.Item>
+                                            <Menu.Item className="iten_notification">
+                                                <Popup
+                                                content="Elliot has been a member since July 2012"
+                                                key="Elliot Fu"
+                                                header="Elliot Fu"
+                                                trigger={<Image src="https://static.platzi.com/media/avatars/avatars/programandres_415dc47e-e96a-4a50-9f8d-00a815095ffd.jpg" avatar />}
+                                                /> <span style={{color: "#000"}}><b>Andres coello:</b> Ha subido una nueva publicacion. <Icon name="newspaper outline" /></span>
+                                            </Menu.Item>
+                                            <div className="text-center p-2">ver todos</div>
+                                        </Menu>
+                                    </div>
                                 </Link>
                                 <Link to="" className="responsive-mobile">
                                     <Menu.Item

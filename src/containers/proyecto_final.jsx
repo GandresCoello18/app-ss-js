@@ -3,7 +3,7 @@ import VentanCurso from "../component/modelo_proyectos";
 import Preguntale from "../component/preguntale_ah";
 import Necesita from "../component/necesita_ayuda";
 import BarraSuperior from '../component/barra_superior';
-import { Image, Button } from 'semantic-ui-react';
+import FinalHTML from "../component/final-html-css";
 
 const ProyectoFinal  = (props) => {
     return(
@@ -25,7 +25,7 @@ const ProyectoFinal  = (props) => {
 
                         <div className="row mt-4">
                             <div className="col-12">
-                                
+                                <FinalHTML />
                             </div>
                         </div>
 

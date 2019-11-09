@@ -1,11 +1,12 @@
 import React from "react";
-import { Image, Segment, Icon, Grid } from "semantic-ui-react";
+import { Link } from "react-router-dom";
+import { Image, Segment, Icon, Button } from "semantic-ui-react";
 
 const ListModelClass = (props) => {
     return(
         <>
             <div className="area_list_model_class p-4" style={{backgroundColor: "white"}}>
-                <Segment compact secondary>
+                <Segment compact secondary color="teal">
                     <div className="row justify-content-center">
                         <div className="col">
                             <Image src="https://i.udemycdn.com/course/240x135/1337000_0d99.jpg" fluid size="small" />
@@ -45,6 +46,11 @@ const ListModelClass = (props) => {
                         </div>
                     </div>
                 </Segment>
+
+                <Link to="/proyecto-final">
+                    <Button className="mt-3" style={{backgroundColor: "#18BE91", color: "white"}} fluid>Realizar Examen <Icon className="ml-3" name="flag outline" /> </Button>
+                </Link>
+                
             </div>
         </>
     );
