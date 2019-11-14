@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Preguntale = (props) => {
     return(
         <>
-            <Card>
+            <Card fluid>
                 <Card.Content>
                 <Card.Header className="text-center">Preguntale</Card.Header>
                 </Card.Content>

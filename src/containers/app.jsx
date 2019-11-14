@@ -6,6 +6,7 @@ import ContenidoPublicacion from "../component/contenido_publicaciones";
 import ContenidoPublicacionFile from "../component/contenido_publicaciones_file";
 import ModeloPublicacion from "../component/modelo_publicacion";
 import BarraSuperior from '../component/barra_superior';
+import Encuesta from "../component/Encuesta-s-s";
 import { Image, Button } from 'semantic-ui-react';
 import "../assets/styles/container/index.scss";
 
@@ -48,6 +49,7 @@ class App extends React.Component{
                         </div>
                     </div>
                 </div>
+                <Encuesta />
             </>
         );
     }

@@ -15,7 +15,7 @@ const NecesitaAyuda = (props) => {
             <article id="area_necesita_ayuda" className="mt-3 mt-md-0">
                 <h5 className="text-center mt-2">Preguntas sin respuesta</h5>
                 {data.map( valor => (
-                    <Card>
+                    <Card fluid>
                         <Card.Content header='About Amy'>
                             <strong className="mt-2">Modelo de caja en CSS</strong>
                             <Label floated='right' circular color='red' key='red' className="ml-5">

@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from 'react-helmet';
-import { Menu, Input, Image, Popup, Icon } from 'semantic-ui-react';
+import { Menu, Input, Image, Popup, Icon, Dropdown } from 'semantic-ui-react';
 import { Link } from "react-router-dom";
 import "../assets/styles/components/header.scss";
 
@@ -10,6 +10,14 @@ class Header extends React.Component{
     }
 
     handleItemClick = (e, { name }) => this.setState({ activeItem: name });
+    open_notification = () => {
+        var area_notification = document.querySelector('.area_notification');
+        if(area_notification.style.display === 'none'){
+            area_notification.style.display = 'block';
+        }else{
+            area_notification.style.display = "none";
+        }
+    }
 
     open = () => {
         var menu = document.querySelectorAll('.responsive-mobile');
@@ -83,20 +91,22 @@ class Header extends React.Component{
                                         onClick={this.handleItemClick}
                                     />
                                 </Link>
-                                <Link to="/video/3" className="responsive-mobile">
-                                    <Menu.Item
-                                        name='Opciones'
-                                        active={activeItem === 'Opciones'}
-                                        onClick={this.handleItemClick}
-                                    />
-                                </Link>    
+                                <a className="responsive-mobile">
+                                    <Dropdown item text='Opciones'>
+                                        <Dropdown.Menu>
+                                            <Dropdown.Item>Cambiar contraseña</Dropdown.Item>
+                                            <Dropdown.Item>Modo Nocturno</Dropdown.Item>
+                                            <Dropdown.Item>Mensajes Directos</Dropdown.Item>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
+                                </a>    
                                 <Link to="" className="responsive-mobile">
                                     <Menu.Item 
                                         name="notificacion"
                                         active={activeItem === 'notificacion'}
-                                        onClick={this.handleItemClick}
+                                        onClick={this.open_notification}
                                     >
-                                        <Icon name="bell" />
+                                        <Icon name="bell" /><span className="punto-bell"></span>
                                     </Menu.Item>
                                     <div className="area_notification">
                                         <Menu vertical>

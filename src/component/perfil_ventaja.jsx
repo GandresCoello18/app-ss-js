@@ -4,7 +4,7 @@ import { Icon, Card, Image } from "semantic-ui-react";
 const PerfilVentana = (props) => {
     return(
         <>
-            <Card>
+            <Card fluid>
                 <Card.Content>
                     <Image
                     floated='right'
